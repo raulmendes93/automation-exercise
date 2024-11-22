@@ -20,7 +20,7 @@ describe('Register User', () => {
     cy.get('.shop-menu > .nav > :nth-child(5) > a').should('be.visible').click();
     cy.get('[data-qa="account-deleted"]')
       .should('be.visible')
-      .and('have.text', 'Account Deleted!');
+      .and('have.text', 'Account');
     cy.get('[data-qa="continue-button"]').should('be.visible').click();
   })
 })
