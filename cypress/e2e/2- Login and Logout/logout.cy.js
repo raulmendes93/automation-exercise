@@ -2,15 +2,15 @@
 
 describe('Logout User', () => {
 
- 
-    beforeEach( () => {
-      cy.viewport(1280, 880);
-      cy.visit('http://automationexercise.com')
+
+    beforeEach(() => {
+        cy.viewport(1280, 880);
+        cy.visit('http://automationexercise.com')
     })
 
     it('Logout User', () => {
 
-        cy.title().should('be.equal','Automation Exercise');
+        cy.title().should('be.equal', 'Automation Exercise');
 
         cy.registerRandomUserAndLogoutUser();
 
