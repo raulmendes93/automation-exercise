@@ -1,20 +1,20 @@
-describe('Login User', () => {
+describe('Register User And Login', () => {
 
-    const email = 'test@testingexercise.com'
+    const email = 'testlogin@testingexercise.com'
     const password = '123456'
     const incorrectemail = 'test@test.com'
     const incorrectpassword = '12345'
 
     beforeEach(() => {
         cy.viewport(1280, 880);
-        cy.visit('http://automationexercise.com')
+        cy.visit('/')
     })
 
     it('Login User with incorrect email and password', () => {
 
         cy.title().should('be.equal', 'Automation Exercise');
 
-        cy.registerUser();
+        cy.registerUserAndLogin();
         cy.get('.shop-menu > .nav > :nth-child(4) > a').click();
         cy.get('h2').should('be.visible', 'Login to your account');
         cy.get('[data-qa="login-email"]').should('be.visible')

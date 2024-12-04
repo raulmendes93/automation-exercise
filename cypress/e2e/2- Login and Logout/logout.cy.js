@@ -1,11 +1,9 @@
-/// <reference types="Cypress" />
-
 describe('Logout User', () => {
 
 
     beforeEach(() => {
         cy.viewport(1280, 880);
-        cy.visit('http://automationexercise.com')
+        cy.visit('/')
     })
 
     it('Logout User', () => {
