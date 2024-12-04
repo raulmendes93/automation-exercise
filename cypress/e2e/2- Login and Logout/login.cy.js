@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 describe('Login User', () => {
 
     const email = 'test@testingexercise.com'

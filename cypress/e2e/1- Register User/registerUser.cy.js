@@ -1,12 +1,10 @@
-/// <reference types="Cypress" />
-
 describe('Register User', () => {
 
   const { faker } = require('@faker-js/faker');
 
   beforeEach(() => {
     cy.viewport(1280, 880);
-    cy.visit('http://automationexercise.com')
+    cy.visit('/')
   })
 
   it('Register user', () => {
