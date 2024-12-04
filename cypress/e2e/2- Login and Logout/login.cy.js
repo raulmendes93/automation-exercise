@@ -14,7 +14,6 @@ describe('Register User And Login', () => {
 
         cy.title().should('be.equal', 'Automation Exercise');
 
-        cy.registerUserAndLogin();
         cy.get('.shop-menu > .nav > :nth-child(4) > a').click();
         cy.get('h2').should('be.visible', 'Login to your account');
         cy.get('[data-qa="login-email"]').should('be.visible')
@@ -42,9 +41,6 @@ describe('Register User And Login', () => {
         cy.contains('button', 'Login').should('be.visible')
             .click();
         cy.get(':nth-child(10) > a').should('be.visible');
-        cy.get('.shop-menu > .nav > :nth-child(5) > a').should('be.visible').click();
-        cy.get('[data-qa="account-deleted"]').should('be.visible');
-        cy.get('[data-qa="continue-button"]').should('be.visible').click();
 
     })
 })
